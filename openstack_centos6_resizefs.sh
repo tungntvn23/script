@@ -15,4 +15,5 @@ chmod +x 05-grow-root.sh
 
 dracut --force --include 05-grow-root.sh /mount --install 'echo awk grep fdisk sfdisk growpart partx e2fsck resize2fs' "$(ls /boot/initramfs-*)" $(ls /boot/|grep vmlinuz|sed s/vmlinuz-//g)
 rm -f 05-grow-root.sh
+
 reboot
