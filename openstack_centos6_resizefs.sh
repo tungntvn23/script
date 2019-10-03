@@ -1,3 +1,5 @@
+yum install -y epel-release
+yum install -y cloud-utils-growpart
 cat << EOF > 05-grow-root.sh
 #!/bin/sh
 
